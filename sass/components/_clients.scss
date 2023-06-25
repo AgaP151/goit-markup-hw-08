@@ -1,0 +1,33 @@
+@import '../utils/vars';
+
+.clients-section {
+  padding: 94px 0 94px 0;
+  &__headline {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon-background {
+    width: 170px;
+    height: 92px;
+    border: $clients-icon-background;
+    border-radius: 4px;
+    &:focus,
+    &:hover {
+      border: $clients-icon-background-active;
+      & > .clients-section__icon {
+        fill: $primary-color;
+      }
+    }
+  }
+  &__icon {
+    margin: 16px 32px;
+    fill: $clients-svg-colors;
+  }
+}

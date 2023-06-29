@@ -1,34 +1,37 @@
 @import '../utils/vars';
 
 .clients-section {
-  // display: none;
-  padding: 60px 0;
+  
+  padding: 30px 0 30px;
   &__headline {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 42px;
     letter-spacing: 0.03em;
     text-align: center;
+    // justify-content: center;
+    // margin: auto;
+    // top: 130px;
   }
   &__icons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin: auto;
+    justify-content: space-between;
 
 
     @include tablet {
       margin-bottom: 30px;
     }
   }
-//  &__link{
-//   padding-bottom: 20px;
-//  }
+
   &__icon-background {
-    width: 180px;
+    width: 210px;
     height: 92px;
     border: $clients-icon-background;
     border-radius: 4px;
-    margin: 30px 0;
+    display: flex;
+    margin-bottom: 30px;
     &:focus,
     &:hover {
       border: $clients-icon-background-active;
@@ -44,26 +47,31 @@
       width: 170px;
     }
   }
+  &__link {
+    margin-bottom: 30px;
+    // max-width: 100%;
+  }
   &__icon {
-    margin: 16px 32px;
+    margin: auto;
+    justify-content: center;
     fill: $clients-svg-colors;
-    &--positon {
-      margin: 12% 40%;
-    }
-    &--positon-1 {
-      margin: 12% 38%;
-    }
-    &--positon-2 {
-      margin: 14% 38%;
-    }
-    &--positon-3 {
-      margin: 12% 34%;
-    }
-    &--positon-4 {
-      margin: 8% 30%;
-    }
-    &--positon-5 {
-      margin: 12% 28%;
-    }
+    // &--positon {
+    //   margin: 12% 40%;
+    // }
+    // &--positon-1 {
+    //   margin: 12% 38%;
+    // }
+    // &--positon-2 {
+    //   margin: 14% 38%;
+    // }
+    // &--positon-3 {
+    //   margin: 12% 34%;
+    // }
+    // &--positon-4 {
+    //   margin: 8% 30%;
+    // }
+    // &--positon-5 {
+    //   margin: 12% 28%;
+    // }
   }
 }

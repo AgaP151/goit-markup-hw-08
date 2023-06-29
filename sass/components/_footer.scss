@@ -43,7 +43,7 @@
   &__webstudio-link {
     font-family: $logo-font;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: $primary-color;
@@ -51,6 +51,7 @@
   &__span-web {
     color: #fff;
   }
+ 
 }
 .address {
   margin-bottom: 60px;
@@ -125,16 +126,17 @@
     margin: 12px;
   }
 }
-.newsletter {
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
+.newsletter,
+form {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    
     @include desktop {
       display: inline;
     }
-  }
+
 
   &__label {
     margin-bottom: 20px;
@@ -147,6 +149,9 @@
     text-transform: uppercase;
     color: #fff;
     width: max-content;
+  //   margin: auto;
+  //  left: 50%;
+    
 
     @include desktop {
       display: block;
@@ -162,6 +167,7 @@
     color: #fff;
     outline: none;
     margin-bottom: 20px;
+    // margin: auto;
 
     &:placeholder-shown {
       border-color: $newsletter-border-color;
@@ -178,6 +184,7 @@
     }
   }
   &__button {
+    // display: flex;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -188,6 +195,8 @@
     border-radius: 4px;
     height: 52px;
     width: 200px;
+//  justify-content: center;
+// position: absolute;
   }
   &__icon {
     fill: #fff;

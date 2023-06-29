@@ -8,11 +8,11 @@ flex-wrap: wrap;
   padding: 94px 0;
   &__headline {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    margin: 0 0 50px;
+    margin: 0 0 30px;
   }
 }
 .employee-list {
@@ -22,7 +22,8 @@ flex-wrap: wrap;
   margin: 0;
   &__member {
     display: block;
-    margin-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
     background: #fff;
     box-shadow: $team-member-shadow;
     &:nth-child(4) {

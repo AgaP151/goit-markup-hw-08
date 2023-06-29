@@ -1,6 +1,8 @@
 @import '../utils/vars';
 
 .team-section {
+display: flex;
+flex-wrap: wrap;
   margin: auto;
   background: $advantages-icons-background-color;
   padding: 94px 0;
@@ -15,6 +17,7 @@
 }
 .employee-list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0;
   &__member {

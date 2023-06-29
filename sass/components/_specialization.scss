@@ -1,6 +1,10 @@
 @import '../utils/vars';
 
 .specialization-section {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
   &__headline {
     font-size: 36px;
     line-height: 1.31;

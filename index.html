@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile menu workshop</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -11,13 +12,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+  
     <title>Studio</title>
   </head>
   <body>
@@ -27,40 +29,47 @@
           <a class="header__webstudio-link" href="#"
             >Web<span class="header__webstudio-link--span">Studio</span></a
           >
+          <button class="header__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg width="30" height="30">
+              <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
           <nav class="header__navigation navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
+            <ul class="header__navigation__list">
+              <li class="header__navigation__item">
                 <a
-                  class="navigation__agency-link navigation__agency-link--underline"
+                  class="header__navigation__agency-link header__navigation__agency-link--underline"
                   href="index.html#agency"
                   >Agencja</a
                 >
               </li>
-              <li class="navigation__item">
+              <li class="header__navigation__item">
                 <a
-                  class="navigation__portfolio-link"
+                  class="header__navigation__portfolio-link"
                   href="portfolio.html#portfolio"
                   >Portfolio</a
                 >
               </li>
-              <li class="navigation__item">
-                <a class="navigation__contact-link" href="#contact">Kontakty</a>
+              <li class="header__navigation__item">
+                <a class="header__navigation__contact-link" href="#contact">Kontakty</a>
               </li>
             </ul>
           </nav>
           <ul class="header__contacts contacts">
-            <li class="contacts__item">
-              <a class="contacts__mail-link" href="mailto:info@devstudio.com">
-                <svg class="contacts__envelope-icon" width="16px" height="12px">
+            <li class="header__contacts__item">
+              <a class="header__contacts__mail-link" href="mailto:info@devstudio.com">
+                <svg class="header__contacts__envelope-icon" width="16px" height="12px">
                   <use href="./images/icons.svg#icon-envelope"></use>
                 </svg>
                 info@devstudio.com</a
               >
             </li>
-            <li class="contacts__item">
-              <a class="contacts__tel-link" href="tel:+48111111111"
+            <li class="header__contacts__item">
+              <a class="header__contacts__tel-link" href="tel:+48111111111"
                 ><svg
-                  class="contacts__smartphone-icon"
+                  class="header__contacts__smartphone-icon"
                   width="10px"
                   height="16px"
                 >
@@ -82,7 +91,7 @@
           <h1 class="header-section__headline" id="agency">
             EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
           </h1>
-          <button data-modal-open class="header-section__button" type="button">
+          <button class="header-section__button" type="button" data-modal-open>
             <span class="header-section__button--text">Zamów usługe</span>
           </button>
         </div>
@@ -142,6 +151,7 @@
         </section>
         <!--czym się zajmujemy-->
         <section class="specialization-section">
+          <div class="container">
           <h2 class="specialization-section__headline">Czym się zajmujemy</h2>
           <ul class="specialization-section__specialization-list specialization-list">
             <li class="specialization-list__item">
@@ -181,6 +191,7 @@
               </div>
             </li>
           </ul>
+          </div>
         </section>
       </div>
       <!--nasz zespół-->
@@ -190,10 +201,16 @@
           <ul class="team-section__employee-list employee-list">
             <li class="employee-list__member">
               <img
-                src="./images/our-team/JohnDoe.jpg"
-                alt="smiling man with dark hair and beard wearing glasses, in a black shirt"
-                width="270"
-                height="260"
+                alt="Portret Johna Doe"
+                src="/images/our-team/JohnDoe-270.jpg"
+                srcset="
+                /images/our-team/JohnDoe-270.jpg 270w,
+                /images/our-team/JohnDoe-354.jpg 354w,
+                /images/our-team/JohnDoe-450.jpg 450w,
+                /images/our-team/JohnDoe-540.jpg 540w,
+                /images/our-team/JohnDoe-708.jpg 708w,
+                /images/our-team/JohnDoe-900.jpg 900w"
+                
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Product Designer</p>
@@ -262,10 +279,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="./images/our-team/JohnDoe1.jpg"
-                alt="smiling woman with blonde hair wearing glasses"
-                width="270"
-                height="260"
+                alt="Portret Johna Doe"
+                src="/images/our-team/JohnDoe1-270.jpg"
+                srcset="
+                /images/our-team/JohnDoe1-270.jpg 270w,
+                /images/our-team/JohnDoe1-354.jpg 354w,
+                /images/our-team/JohnDoe1-450.jpg 450w,
+                /images/our-team/JohnDoe1-540.jpg 540w,
+                /images/our-team/JohnDoe1-708.jpg 708w,
+                /images/our-team/JohnDoe1-900.jpg 900w"
+                
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Frontend Developer</p>
@@ -334,10 +357,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="./images/our-team/JohnDoe2.jpg"
-                alt="young smiling man with dark hair in a light shirt"
-                width="270"
-                height="260"
+                alt="Portret Johna Doe"
+                src="/images/our-team/JohnDoe2-270.jpg"
+                srcset="
+                /images/our-team/JohnDoe2-270.jpg 270w,
+                /images/our-team/JohnDoe2-354.jpg 354w,
+                /images/our-team/JohnDoe2-450.jpg 450w,
+                /images/our-team/JohnDoe2-540.jpg 540w,
+                /images/our-team/JohnDoe2-708.jpg 708w,
+                /images/our-team/JohnDoe2-900.jpg 900w"
+                
               />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">Marketing</p>
@@ -406,11 +435,16 @@
             </li>
             <li class="employee-list__member">
               <img
-                src="./images/our-team/JohnDoe3.jpg"
-                alt="smiling man with dark hair and beard wearing glasses, in a black shirt"
-                width="270"
-                height="260"
-              />
+              alt="Portret Johna Doe"
+              src="/images/our-team/JohnDoe3-270.jpg"
+              srcset="
+              /images/our-team/JohnDoe3-270.jpg 270w,
+              /images/our-team/JohnDoe3-354.jpg 354w,
+              /images/our-team/JohnDoe3-450.jpg 450w,
+              /images/our-team/JohnDoe3-540.jpg 540w,
+              /images/our-team/JohnDoe3-708.jpg 708w,
+              /images/our-team/JohnDoe3-900.jpg 900w"
+            />
               <h3 class="employee-list__member-name">John Doe</h3>
               <p class="employee-list__member-role">UI Designer</p>
               <ul class="employee-list__social-links">
@@ -671,6 +705,74 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-container js-menu-container" >
+      <button class="menu-container__close-btn js-close-menu">
+        <svg width="30" height="30">
+          <use href="/images/icons.svg#icon-close-black-18dp-2-1-1"></use>
+        </svg>
+      </button>
+      <nav class="menu-container__navigation">
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a
+              class="menu-container__link navigation__agency-link--underline"
+              href="index.html#agency"
+              >Agencja</a>
+          </li>
+          <li class="menu-container__item">
+            <a
+              class="menu-container__link"
+              href="portfolio.html#portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link-tel" href="#contact">Kontakty</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container__social">
+        <div>
+      <ul class="menu-container__contacts contacts">
+        <li class="menu-container__item">
+          <a class="menu-container__link-mail" href="tel:+48111111111"
+          >
+          <!-- <svg
+              class="contacts__smartphone-icon"
+              width="10px"
+              height="16px"
+            >
+              <use
+                href="./images/icons.svg#icon-smartphone"
+              ></use>
+            </svg> -->
+            +48 111 111 111</a
+          >
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link" href="mailto:info@devstudio.com">
+            <!-- <svg class="contacts__envelope-icon" width="16px" height="12px">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg> -->
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+    </div>
+        <div>
+          <ul class="menu-container__socials">
+              <li class="menu-container__item"><a class="menu-container__link-social" href="www.instagram.com">Instagram</a></li>
+              <li class="menu-container__item"><a class="menu-container__link-social" href="www.twitter.com">Twitter</a></li>
+              <li class="menu-container__item"><a class="menu-container__link-social" href="www.facebook.com">Facebook</a></li>
+              <li class="menu-container__item"><a class="menu-container__link-social" href="www.linkedin.com">LinkedIn</a></li>
+            </ul>
+          </div>
+          
+  
+
+    </div>
+    
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-button" data-modal-close>
@@ -748,6 +850,14 @@
         </div>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="/js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+  
   </body>
 </html>

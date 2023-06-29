@@ -2,8 +2,18 @@
 
 .header {
   border-bottom: $main-header-border;
+  padding: 10px 0;
+  // justify-content: ;
+@include tablet { 
+  padding: 21px 0;
+}
+@include desktop {
+  padding: 25px 0 25px;
+}
+  
   &__flex-container {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
   }
   &__webstudio-link {
@@ -13,25 +23,53 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    margin: 24px 93px 25px 0;
+    // margin-left: 83px;
     &--span {
       color: $header-logo-color;
     }
   }
-}
-.navigation {
+  &__button{
+    // position: absolute;
+    // left: 80%;
+    justify-content: flex-end;
+    border: none;
+    background-color: transparent;
+    color: $primary-color;
+
+    &:hover,
+    &:focus{
+      color: $primary-color;
+    }
+    @include tablet {
+      display: none;
+    }
+
+
+  }
+
+&__navigation {
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-left: 83px;
+    margin-right: auto;
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
   &__list {
     color: $primary-text-color;
     display: flex;
+    margin: auto;
     justify-content: space-evenly;
-    max-width: 600px;
+    max-width: 40%;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
   &__item {
-    margin-right: 46px;
+      margin-right: 46px;
     &:nth-child(3) {
       margin-right: 0;
     }
@@ -39,7 +77,7 @@
 
   &__agency-link,
   &__agency-link:visited {
-    color: $primary-text-color;
+      color: $primary-text-color;
   }
   &__agency-link--underline {
     color: $primary-color;
@@ -73,14 +111,26 @@
   }
   &__contact-link {
     color: $primary-text-color;
-    margin-right: 364px;
+    // margin-right: 364px;
     &:visited {
       color: $primary-text-color;
     }
   }
 }
-.contacts {
-  display: flex;
+&__contacts {
+  display: none;
+
+  @include tablet {
+    display: block;
+    // flex-direction: row;
+    gap: 10px;
+  }
+  @include desktop {
+    display: flex;
+        flex-direction: row;
+    gap: 30px;
+  }
+
   &__tel-link {
     color: $secondary-text-color;
     font-weight: 500;
@@ -89,12 +139,17 @@
     letter-spacing: 0.02em;
   }
   &__mail-link {
-    @extend .contacts__tel-link;
-    margin-right: 50px;
-  }
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    // margin-right: 50px;
   &__envelope-icon,
   &__smartphone-icon {
     margin-right: 10px;
     fill: currentColor;
   }
+  }
+}
 }

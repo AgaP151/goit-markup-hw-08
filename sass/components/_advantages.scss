@@ -1,21 +1,34 @@
 @import '../utils/vars';
 
 .advantages-section {
-  display: flex;
+    display:flex;
+    flex-direction: column;
+    
 }
 .advantage {
-  margin: 0 30px 94px 0;
+  margin: 10px 0 30px 0;
+  // margin: 0 30px 94px 0;
   &:nth-child(4) {
     margin-right: 0;
   }
   &__item {
-    width: 270px;
+    width: auto;
     height: 120px;
     background-color: $advantages-icons-background-color;
     margin-bottom: 30px;
+    border-radius: 4px;
+    @include desktop {
+      width: 270px;
+    height: 120px;
+    }
   }
   &__icon {
-    margin: 25px 100px;
+    left: 50;
+    // margin: auto;
+// justify-content: flex-end;
+
+    @include desktop {
+    margin: 25px 100px;}
   }
   &__tittle {
     font-size: 14px;
@@ -23,6 +36,8 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    justify-content: center;
+    left: 50%;
   }
   &__text {
     font-weight: 400;

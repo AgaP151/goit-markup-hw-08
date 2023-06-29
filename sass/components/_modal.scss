@@ -38,7 +38,14 @@
     top: 8px;
     left: 91%;
     cursor: pointer;
+    transition: $primary-transitions;
+
+    &:hover,
+    &:focus {
+    fill: $primary-color;
   }
+    }
+  
 }
 .form {
   position: relative;

@@ -24,7 +24,12 @@
     right: 8px;
     background-color: transparent;
     border: none;
-  }
+    // transition: $primary-transitions;
+
+    &:hover,
+    &:focus {
+    fill: $primary-color;
+  }}
   &__contacts {
     margin: 0 0 64px 40px;
   }

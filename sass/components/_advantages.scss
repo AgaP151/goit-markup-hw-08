@@ -15,17 +15,19 @@
     width: auto;
     height: 120px;
     background-color: $advantages-icons-background-color;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     border-radius: 4px;
+    display: flex;
     @include desktop {
       width: 270px;
     height: 120px;
     }
   }
   &__icon {
-    left: 50;
-    // margin: auto;
-// justify-content: flex-end;
+    margin: auto;
+   
+
+  
 
     @include desktop {
     margin: 25px 100px;}

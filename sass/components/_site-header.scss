@@ -12,7 +12,7 @@
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  background-image: url(/images/People-in-office@2x.jpg);}
+  background-image: url(../images/People-in-office@2x.jpg);}
 
   @include tablet {
     height: 400px;
@@ -71,7 +71,7 @@
     }
   }
   
-  &__button {
+  &__button--open {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

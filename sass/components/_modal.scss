@@ -51,6 +51,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  @include desktop {
+   margin: 0 40px;
+  }
   &__headline {
     font-style: normal;
     font-weight: 700;
@@ -62,10 +65,10 @@
     margin: 2px auto 12px;
     width: 370px;
 
-    @include desktop {
-      line-height: 23px;
-      width: max-content;
-    }
+    // @include desktop {
+    //   // line-height: 23px;
+    //   width: max-content;
+    // }
   }
   &__label {
     font-style: normal;
@@ -126,16 +129,14 @@
 
     @include desktop {
       width: 366px;
-    }}
+      margin: 10px auto 0 0}
+    }
   &__textarea-label {
     @extend .form__label;
-    // 
-    // display: flex;
-    // @extend .form__label;
     padding-bottom: 0;
 
     @include desktop {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
     &__textarea-border {
@@ -166,7 +167,9 @@
 
     @include desktop {
       width: 416px;
-    }
+      bottom: 15px;
+      height: 96px;
+          }
   }
   &__declaration-label {
     display: flex;
@@ -177,12 +180,12 @@ padding-top: 20px;
     // padding-left: 40px;
 
     @include desktop {
-      padding-left: 55px;
+     padding: 0;
     }
   }
   &__checkbox {
     position: relative;
-    inset: 20px 0 0 0px;
+    inset: 20px 0 0 0;
     // top: 20px;
     width: 16px;
     height: 15px;
@@ -195,13 +198,22 @@ padding-top: 20px;
     &:checked ~ .form__checkbox-square-svg {
       visibility: hidden;
     }
+    @include desktop {
+      inset: 3px 0 10px 17px;
+    }
+  //   @include desktop {
+  //    input: 0 30px;
+  //   }
+  // }
+  
+
   }
   &__checkbox-square-svg {
     position: relative;
-    left: 0px;
+    left: 40px 0;
 
     @include desktop {
-      left: 54px;
+      top: 3px;
     }
   }
   &__checkbox-checked-svg {
@@ -215,9 +227,9 @@ padding-top: 20px;
     // bottom: 9px;
     visibility: hidden;
 
-    @include desktop {
-      left: 54px;
-    }
+    // @include desktop {
+    //   left: 54px;
+    // }
   }
   &__declaration {
     position: relative;
@@ -233,13 +245,10 @@ padding-top: 20px;
     color: $secondary-text-color;
 
     @include desktop {
-      left: 79px;
-      bottom: 42px;
       line-height: 24px;
       font-size: 14px;
-    }
-  }
-  
+      }
+}
   &__declaration-link {
     color: $primary-color;
     &:hover,
@@ -267,7 +276,8 @@ padding-top: 20px;
     // bottom: 20px;
 
     @include desktop {
-      margin-left: 164px;
-    }
+      justify-content: center;
+    margin-left: 115px;
   }
+}
 }

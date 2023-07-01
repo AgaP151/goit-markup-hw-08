@@ -6,7 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
   height: 100%;
   width: 100%;
   background-image: url(../images/people-in-office-m@1x.jpg);
@@ -36,9 +36,10 @@
 }
   }
   @include desktop {
-    padding: 200px 0;
+    
     height: 600px;
     max-width: 1600px;
+    margin-bottom: 94px;
       }
 
   
@@ -58,7 +59,12 @@
     @include desktop {
         padding: 0;
     }
-
+@include desktop {
+    // background-position: 100% 100%;
+    max-width: 1600px;
+    height: 600px;
+    padding: 0;
+}
  
   }
   &__headline {
@@ -74,8 +80,8 @@
     margin: auto;
 
     @include desktop {
-align-items: center;
-      // max-height: 120px;
+// align-items: center;
+   margin: 200PX 0 0;
       font-size: 44px;
       max-width: 696px;
       // padding-bottom: 30px;
@@ -96,5 +102,7 @@ align-items: center;
     border-radius: 4px;
     background-color: $primary-color;
     padding: 10px 41px 10px 42px;
+@include desktop {}
+
   }
   }
